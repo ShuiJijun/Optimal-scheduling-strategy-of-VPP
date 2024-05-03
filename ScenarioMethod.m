@@ -133,7 +133,7 @@ S_pre = D_ge;
 fprintf('\n最终场景数量设置为：%d\n\n',k)
 PS_pre = 1/length(PpV_t_new(:,1))*ones(length(PpV_t_new(:,1)),1)*100;       % 单位：%
 %% 调用 ManhattanDistance 子函数，计算得到场景生成与削减前后的结果
-[d_ge_b,d_ge_a,Y_ge_b,Y_ge_a,S_pre_b,S_pre_a,PS_pre_b,PS_pre_a] = ManhattanDistanceMin2Change(S_pre,PS_pre,k);
+[d_ge_b,d_ge_a,Y_ge_b,Y_ge_a,S_pre_b,S_pre_a,PS_pre_b,PS_pre_a] = ManhattanDistance(S_pre,PS_pre,k);
 % d_ge_b 为场景生成与削减前-曼哈顿距离矩阵
 % d_ge_a 为场景生成与削减后-曼哈顿距离矩阵
 % Y_ge_b 为场景生成与削减前-概率距离矩阵（列向量）

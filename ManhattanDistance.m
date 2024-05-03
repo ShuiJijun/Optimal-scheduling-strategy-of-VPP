@@ -57,7 +57,7 @@ for epochs = 1:times
         Y_ge_a(k) = PS_pre_a(k)*sum(d_ge_a(k,:));                           % 这里写d_ge(i,:)或者d_ge(:,i)都可以
     end
     %% 查找待削减场景
-    [~,~,pomin1,pomin2] = min12(Y_ge_a);                                    % 查找最小的带削减场景g；查找次要小的带削减场景h
+    [~,~,pomin1,pomin2] = min12(Y_ge_a);                                    % 查找最小的待削减场景g；查找次要小的待削减场景h
     %% 已确定待削减场景的位置编号
     %% 场景生成，只是场景对应的概率叠加了
     %% 删减 pomin2 位置的场景，保留 pomin1 位置的场景
